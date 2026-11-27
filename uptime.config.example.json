@@ -1,0 +1,6 @@
+{
+  "remoteDesktop": {
+    "name": "my-server",
+    "url": "wss://vnc.example.com/websockify"
+  }
+}

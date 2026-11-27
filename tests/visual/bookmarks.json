@@ -1,0 +1,146 @@
+[
+ {
+  "name": "entry_aisle",
+  "pos": [
+   0.6,
+   1.68,
+   4.2
+  ],
+  "yaw": -1.5708,
+  "pitch": -0.02,
+  "fov": 75,
+  "mode": "walk"
+ },
+ {
+  "name": "aisle_low_floor",
+  "pos": [
+   1.6,
+   0.3,
+   4.2
+  ],
+  "yaw": -1.5708,
+  "pitch": 0.05,
+  "fov": 60,
+  "mode": "walk"
+ },
+ {
+  "name": "aisle_end_back",
+  "pos": [
+   11.2,
+   1.68,
+   4.2
+  ],
+  "yaw": 1.5708,
+  "pitch": -0.03,
+  "fov": 75,
+  "mode": "walk"
+ },
+ {
+  "name": "rack_front_close",
+  "pos": [
+   4.9,
+   1.45,
+   4.55
+  ],
+  "yaw": 0.25,
+  "pitch": -0.05,
+  "fov": 60,
+  "mode": "walk"
+ },
+ {
+  "name": "server_pulled",
+  "pos": [
+   4.5,
+   1.5,
+   4.5
+  ],
+  "yaw": 0,
+  "pitch": -0.5,
+  "fov": 60,
+  "mode": "pulled"
+ },
+ {
+  "name": "server_exploded",
+  "pos": [
+   4.5,
+   1.5,
+   4.5
+  ],
+  "yaw": 0,
+  "pitch": -0.5,
+  "fov": 60,
+  "mode": "exploded"
+ },
+ {
+  "name": "desk_seated",
+  "pos": [
+   -1.55,
+   1.25,
+   4.5
+  ],
+  "yaw": -1.5708,
+  "pitch": -0.04,
+  "fov": 50,
+  "mode": "seated"
+ },
+ {
+  "name": "desk_over_shoulder",
+  "pos": [
+   -2.6,
+   1.7,
+   5.3
+  ],
+  "yaw": -1.2208,
+  "pitch": -0.18,
+  "fov": 55,
+  "mode": "walk"
+ },
+ {
+  "name": "hall_through_glass",
+  "pos": [
+   -3.2,
+   1.68,
+   4.9
+  ],
+  "yaw": -1.5208,
+  "pitch": -0.02,
+  "fov": 65,
+  "mode": "walk"
+ },
+ {
+  "name": "loading_bay_delivery",
+  "pos": [
+   -0.5,
+   1.68,
+   8.6
+  ],
+  "yaw": 1.0708,
+  "pitch": -0.34,
+  "fov": 70,
+  "mode": "walk"
+ },
+ {
+  "name": "hot_aisle_rear",
+  "pos": [
+   2.6,
+   1.68,
+   1.0
+  ],
+  "yaw": -1.5708,
+  "pitch": -0.02,
+  "fov": 70,
+  "mode": "walk"
+ },
+ {
+  "name": "hall_b_reveal",
+  "pos": [
+   9.0,
+   1.68,
+   4.2
+  ],
+  "yaw": -1.5708,
+  "pitch": 0.0,
+  "fov": 70,
+  "mode": "hallB"
+ }
+]

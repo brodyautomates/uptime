@@ -1,0 +1,69 @@
+:root { --glass: rgba(14, 18, 24, 0.62); --line: rgba(255, 255, 255, 0.1); --dim: #8e99a6; --green: #35e06f; --amber: #ffb020; --red: #ff3b30; --cyan: #39d0ff; --ts: 1; }
+#ui { font-size: calc(13px * var(--ts)); }
+.glass { background: var(--glass); backdrop-filter: blur(18px) saturate(1.3); -webkit-backdrop-filter: blur(18px) saturate(1.3); border: 1px solid var(--line); border-radius: 12px; }
+.topbar { position: absolute; top: 16px; left: 16px; display: flex; gap: 18px; padding: 8px 14px; align-items: center; font-variant-numeric: tabular-nums; }
+.topbar .k { color: var(--dim); margin-right: 6px; }
+.topbar .warn { color: var(--amber); } .topbar .bad { color: var(--red); } .topbar .good { color: var(--green); }
+.cross { position: absolute; left: 50%; top: 50%; width: 4px; height: 4px; margin: -2px; border-radius: 50%; background: rgba(255, 255, 255, 0.75); }
+.prompt { position: absolute; left: 50%; top: calc(50% + 34px); transform: translateX(-50%); padding: 6px 12px; white-space: pre; font-weight: 500; }
+.card { position: absolute; left: calc(50% + 28px); top: calc(50% - 64px); padding: 8px 12px; min-width: 150px; }
+.card b, .panel b { font-weight: 600; } .card div + div, .panel .row { color: var(--dim); margin-top: 2px; }
+.feed { position: absolute; right: 16px; bottom: 16px; display: flex; flex-direction: column; gap: 6px; align-items: flex-end; }
+.feed .line { padding: 6px 12px; animation: fade 6s forwards; }
+.feed .claude { color: var(--cyan); } .feed .warn { color: var(--amber); } .feed .critical { color: var(--red); }
+@keyframes fade { 0%, 80% { opacity: 1; } 100% { opacity: 0; } }
+.panel { position: absolute; right: 24px; top: 24px; width: 290px; padding: 14px 16px; pointer-events: auto; }
+.panel h3 { margin: 0 0 6px; font-size: 1.15em; font-weight: 600; letter-spacing: 0.01em; }
+.panel .row { display: flex; justify-content: space-between; } .panel .row span:last-child { color: #e8edf2; }
+.panel hr { border: 0; border-top: 1px solid var(--line); margin: 10px 0; }
+.bar { height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.12); margin-top: 6px; overflow: hidden; } .bar i { display: block; height: 100%; background: var(--green); }
+.btn { pointer-events: auto; cursor: pointer; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.06); color: inherit; font: inherit; }
+.btn:hover { background: rgba(255, 255, 255, 0.14); } .btn[disabled] { opacity: 0.4; cursor: default; }
+.keys { position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); padding: 6px 14px; color: var(--dim); white-space: pre; }
+.keys b { color: #e8edf2; font-weight: 600; }
+.menu { position: absolute; padding: 6px; min-width: 210px; pointer-events: auto; }
+.menu .t { padding: 4px 8px 6px; color: var(--dim); }
+.menu .it { padding: 6px 8px; border-radius: 6px; cursor: pointer; display: flex; justify-content: space-between; gap: 12px; }
+.menu .it:hover { background: rgba(255, 255, 255, 0.12); } .menu .it small { color: var(--dim); }
+.label { position: absolute; transform: translate(14px, -50%); padding: 4px 10px; border-left: 2px solid #fff; white-space: nowrap; }
+.label small { display: block; color: var(--dim); }
+.dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; }
+.held { position: absolute; right: 16px; bottom: 120px; padding: 8px 12px; }
+.banner { position: absolute; left: 50%; top: 16px; transform: translateX(-50%); padding: 8px 14px; color: var(--amber); }
+.scrim { position: absolute; inset: 0; background: rgba(4, 6, 9, 0.62); display: flex; align-items: center; justify-content: center; pointer-events: auto; }
+.scrim.main { background: linear-gradient(90deg, rgba(4,6,9,.86) 0%, rgba(4,6,9,.5) 42%, rgba(4,6,9,0) 75%); justify-content: flex-start; padding-left: 8vw; }
+.sheet { width: 420px; padding: 26px 28px; }
+.sheet h1 { margin: 0 0 4px; font-size: 34px; font-weight: 700; letter-spacing: 0.22em; }
+.sheet h2 { margin: 0 0 12px; font-size: 19px; font-weight: 600; }
+.sheet p { color: #b9c3ce; line-height: 1.5; margin: 0 0 14px; }
+.sheet .sub { color: var(--dim); margin-bottom: 20px; }
+.mlist { display: flex; flex-direction: column; gap: 6px; }
+.mbtn { all: unset; cursor: pointer; padding: 9px 14px; border-radius: 9px; border: 1px solid transparent; font-size: 1.08em; }
+.mbtn:hover, .mbtn:focus-visible { background: rgba(255,255,255,.1); border-color: var(--line); }
+.mbtn[disabled] { opacity: .35; cursor: default; } .mbtn.pri { background: #1f8fb5; }
+.mbtn small { display: block; color: var(--dim); font-size: .82em; margin-top: 1px; }
+.field { display: block; margin: 10px 0; color: var(--dim); } .field input, .field select { display: block; width: 100%; box-sizing: border-box; margin-top: 4px; background: rgba(255,255,255,.07); color: #e8edf2; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font: inherit; }
+.check { position: absolute; top: 16px; right: 16px; width: 300px; padding: 12px 14px; pointer-events: auto; }
+.check b { display: block; margin-bottom: 6px; } .check .st { display: flex; gap: 8px; padding: 2px 0; color: var(--dim); } .check .st.cur { color: #e8edf2; } .check .st.done { text-decoration: line-through; opacity: .55; }
+.check .box { width: 12px; height: 12px; border-radius: 3px; border: 1px solid var(--dim); margin-top: 3px; flex: none; } .check .done .box { background: var(--green); border-color: var(--green); }
+.check .hint { margin-top: 8px; color: var(--cyan); } .check .x { position: absolute; right: 10px; top: 8px; cursor: pointer; color: var(--dim); }
+.tablet { position: absolute; left: 50%; bottom: 3%; transform: translateX(-50%); width: 560px; padding: 14px 18px; border-radius: 18px; }
+.tablet .cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 8px; } .tablet .k { color: var(--dim); font-size: .9em; } .tablet .v { font-size: 1.25em; font-weight: 600; }
+.tablet .al { color: var(--dim); padding: 2px 0; } .tablet .al.critical { color: var(--red); } .tablet .al.warn { color: var(--amber); }
+.debug { position: absolute; left: 16px; bottom: 16px; padding: 8px 12px; font: 500 12px "SF Mono", Menlo, monospace; white-space: pre; }
+body.guide916 #ui::after { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: calc(100vh * 9 / 16); transform: translateX(-50%); border-left: 1px dashed rgba(255,255,255,.35); border-right: 1px dashed rgba(255,255,255,.35); pointer-events: none; }
+
+.btn.hold { position: relative; overflow: hidden; } .btn.hold i { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(57,208,255,.35); pointer-events: none; } .btn.hold span { position: relative; }
+.splash { position: absolute; inset: 0; background: #05070a; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; animation: splashOut 1.5s forwards; pointer-events: none; z-index: 20; } .splash h1 { margin: 0; font-size: 44px; letter-spacing: .3em; font-weight: 700; } .splash div { color: var(--dim); }
+@keyframes splashOut { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+
+.leaders { position: absolute; inset: 0; pointer-events: none; } .leaders line { stroke: rgba(255,255,255,.55); stroke-width: 1; }
+
+/* the first-shift card sits top-right (SPEC appendix A); with a server open it folds to one line and the inspect panel sits under it, so neither covers the other or the parts */
+body.has-check .panel { top: 60px; }
+.check.mini { width: auto; padding: 6px 12px; } .check.mini b { display: inline; margin: 0; } .check.mini span.step { color: var(--dim); margin-left: 8px; }
+
+.seatbar { position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 60; display: flex; gap: 14px; align-items: center; padding: 6px 10px 6px 6px; font-size: 12px; color: var(--dim); pointer-events: auto; }
+.seatbar b { color: #e8eef5; font-weight: 600; margin: 0 2px 0 6px; }
+.seatbar button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: #e8eef5; border-radius: 6px; padding: 5px 10px; font: inherit; cursor: pointer; }
+.seatbar button:hover { background: rgba(255,255,255,0.2); }

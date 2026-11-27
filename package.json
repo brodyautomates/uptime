@@ -1,0 +1,86 @@
+{
+  "name": "uptime",
+  "productName": "UPTIME",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A first-person data center game with a real Claude Code terminal.",
+  "main": "out/main/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "postinstall": "chmod +x node_modules/node-pty/prebuilds/darwin-arm64/spawn-helper || true",
+    "gates": "electron-vite build && node scripts/gates.mjs",
+    "check": "tsc --noEmit -p tsconfig.json && npm run lint && vitest run && npm run gates",
+    "dist": "electron-vite build && electron-builder --mac dmg --arm64",
+    "render-replay": "node scripts/render-replay.ts",
+    "lint": "node scripts/lint-paths.mjs"
+  },
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "@novnc/novnc": "^1.7.0",
+    "@xterm/addon-webgl": "0.19.0",
+    "@xterm/xterm": "6.0.0",
+    "node-pty": "1.1.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0",
+    "zod": "4.6.7",
+    "zustand": "5.1.0"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "4.2.1",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "@webgpu/types": "0.1.74",
+    "electron": "45.3.0",
+    "electron-builder": "26.18.0",
+    "electron-vite": "6.0.0",
+    "playwright": "1.65.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.8",
+    "vitest": "5.1.0"
+  },
+  "allowScripts": {
+    "node-pty@1.1.0": true
+  },
+  "build": {
+    "appId": "io.uptime.game",
+    "productName": "UPTIME",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "out/**",
+      "package.json"
+    ],
+    "asarUnpack": [
+      "node_modules/node-pty/**"
+    ],
+    "npmRebuild": false,
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.simulation-games",
+      "identity": null,
+      "hardenedRuntime": false
+    },
+    "dmg": {
+      "title": "UPTIME"
+    }
+  },
+  "author": "UPTIME"
+}

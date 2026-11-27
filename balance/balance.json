@@ -1,0 +1,483 @@
+{
+  "time": {
+    "tickMs": 100,
+    "ticksPerGameHour": 300,
+    "hoursPerDay": 24,
+    "startHour": 6,
+    "bootTicks": 200
+  },
+  "rates": {
+    "cpu": 3,
+    "gpu": 8,
+    "tb": 0.25,
+    "spotMult": 0.6,
+    "powerPerKwh": 6,
+    "overhead": 1.5,
+    "rentPerHallHour": 50
+  },
+  "catalogue": {
+    "cpu.k1": {
+      "name": "Kestrel CPU K1",
+      "family": "cpu",
+      "tier": 1,
+      "price": 400,
+      "watts": 120,
+      "value": 10
+    },
+    "cpu.k2": {
+      "name": "Kestrel CPU K2",
+      "family": "cpu",
+      "tier": 2,
+      "price": 900,
+      "watts": 150,
+      "value": 18
+    },
+    "cpu.k3": {
+      "name": "Kestrel CPU K3",
+      "family": "cpu",
+      "tier": 3,
+      "price": 2000,
+      "watts": 190,
+      "value": 32
+    },
+    "cpu.k4": {
+      "name": "Kestrel CPU K4",
+      "family": "cpu",
+      "tier": 4,
+      "price": 4500,
+      "watts": 240,
+      "value": 56
+    },
+    "cpu.k5": {
+      "name": "Kestrel CPU K5",
+      "family": "cpu",
+      "tier": 5,
+      "price": 10000,
+      "watts": 300,
+      "value": 96
+    },
+    "gpu.v1": {
+      "name": "Vanta GPU V1",
+      "family": "gpu",
+      "tier": 1,
+      "price": 1500,
+      "watts": 250,
+      "value": 20
+    },
+    "gpu.v2": {
+      "name": "Vanta GPU V2",
+      "family": "gpu",
+      "tier": 2,
+      "price": 4000,
+      "watts": 320,
+      "value": 45
+    },
+    "gpu.v3": {
+      "name": "Vanta GPU V3",
+      "family": "gpu",
+      "tier": 3,
+      "price": 10000,
+      "watts": 400,
+      "value": 100
+    },
+    "gpu.v4": {
+      "name": "Vanta GPU V4",
+      "family": "gpu",
+      "tier": 4,
+      "price": 25000,
+      "watts": 500,
+      "value": 220
+    },
+    "gpu.v5": {
+      "name": "Vanta GPU V5",
+      "family": "gpu",
+      "tier": 5,
+      "price": 60000,
+      "watts": 650,
+      "value": 480
+    },
+    "ram.s1": {
+      "name": "Strata RAM S1",
+      "family": "ram",
+      "tier": 1,
+      "price": 120,
+      "watts": 4,
+      "value": 32
+    },
+    "ram.s2": {
+      "name": "Strata RAM S2",
+      "family": "ram",
+      "tier": 2,
+      "price": 260,
+      "watts": 5,
+      "value": 64
+    },
+    "ram.s3": {
+      "name": "Strata RAM S3",
+      "family": "ram",
+      "tier": 3,
+      "price": 600,
+      "watts": 6,
+      "value": 128
+    },
+    "ram.s4": {
+      "name": "Strata RAM S4",
+      "family": "ram",
+      "tier": 4,
+      "price": 1400,
+      "watts": 8,
+      "value": 256
+    },
+    "ram.s5": {
+      "name": "Strata RAM S5",
+      "family": "ram",
+      "tier": 5,
+      "price": 3200,
+      "watts": 10,
+      "value": 512
+    },
+    "drv.f1": {
+      "name": "Flux drive F1",
+      "family": "drv",
+      "tier": 1,
+      "price": 200,
+      "watts": 8,
+      "value": 2
+    },
+    "drv.f2": {
+      "name": "Flux drive F2",
+      "family": "drv",
+      "tier": 2,
+      "price": 450,
+      "watts": 9,
+      "value": 4
+    },
+    "drv.f3": {
+      "name": "Flux drive F3",
+      "family": "drv",
+      "tier": 3,
+      "price": 1000,
+      "watts": 10,
+      "value": 8
+    },
+    "drv.f4": {
+      "name": "Flux drive F4",
+      "family": "drv",
+      "tier": 4,
+      "price": 2200,
+      "watts": 12,
+      "value": 16
+    },
+    "drv.f5": {
+      "name": "Flux drive F5",
+      "family": "drv",
+      "tier": 5,
+      "price": 5000,
+      "watts": 14,
+      "value": 32
+    },
+    "psu.b1": {
+      "name": "Bastion PSU B1",
+      "family": "psu",
+      "tier": 1,
+      "price": 250,
+      "watts": 0,
+      "value": 800
+    },
+    "psu.b2": {
+      "name": "Bastion PSU B2",
+      "family": "psu",
+      "tier": 2,
+      "price": 500,
+      "watts": 0,
+      "value": 1200
+    },
+    "psu.b3": {
+      "name": "Bastion PSU B3",
+      "family": "psu",
+      "tier": 3,
+      "price": 900,
+      "watts": 0,
+      "value": 1600
+    },
+    "psu.b4": {
+      "name": "Bastion PSU B4",
+      "family": "psu",
+      "tier": 4,
+      "price": 1800,
+      "watts": 0,
+      "value": 2400
+    },
+    "psu.b5": {
+      "name": "Bastion PSU B5",
+      "family": "psu",
+      "tier": 5,
+      "price": 3500,
+      "watts": 0,
+      "value": 3200
+    },
+    "fan.z1": {
+      "name": "Zephyr fan Z1",
+      "family": "fan",
+      "tier": 1,
+      "price": 40,
+      "watts": 0,
+      "value": 400
+    },
+    "fan.z2": {
+      "name": "Zephyr fan Z2",
+      "family": "fan",
+      "tier": 2,
+      "price": 120,
+      "watts": 0,
+      "value": 800
+    },
+    "fan.z3": {
+      "name": "Zephyr fan Z3",
+      "family": "fan",
+      "tier": 3,
+      "price": 350,
+      "watts": 0,
+      "value": 1500
+    },
+    "nic.l1": {
+      "name": "Lumen NIC L1",
+      "family": "nic",
+      "tier": 1,
+      "price": 150,
+      "watts": 0,
+      "value": 10
+    },
+    "nic.l2": {
+      "name": "Lumen NIC L2",
+      "family": "nic",
+      "tier": 2,
+      "price": 500,
+      "watts": 0,
+      "value": 25
+    },
+    "nic.l3": {
+      "name": "Lumen NIC L3",
+      "family": "nic",
+      "tier": 3,
+      "price": 1800,
+      "watts": 0,
+      "value": 100
+    },
+    "nic.l4": {
+      "name": "Lumen NIC L4",
+      "family": "nic",
+      "tier": 4,
+      "price": 6000,
+      "watts": 0,
+      "value": 400
+    }
+  },
+  "facility": {
+    "powerTiers": [
+      {
+        "kw": 40,
+        "price": 0
+      },
+      {
+        "kw": 120,
+        "price": 15000
+      },
+      {
+        "kw": 400,
+        "price": 60000
+      },
+      {
+        "kw": 1200,
+        "price": 250000
+      }
+    ],
+    "coolingTiers": [
+      {
+        "kw": 30,
+        "price": 0
+      },
+      {
+        "kw": 100,
+        "price": 15000
+      },
+      {
+        "kw": 350,
+        "price": 60000
+      },
+      {
+        "kw": 1100,
+        "price": 250000
+      }
+    ],
+    "pduBaseKw": 15,
+    "pduUpgradedKw": 30,
+    "pduUpgradePrice": 2500,
+    "rearDoorPrice": 4000,
+    "rearDoorKw": 10,
+    "halls": {
+      "A": {
+        "slots": 12,
+        "price": 0
+      },
+      "B": {
+        "slots": 16,
+        "price": 120000
+      },
+      "C": {
+        "slots": 32,
+        "price": 600000
+      }
+    },
+    "baysPerRack": 10,
+    "powerWarnPct": 0.9
+  },
+  "server": {
+    "cpuRamGbPerUnit": 4,
+    "gpuRamGbPerUnit": 2,
+    "gpuPerCpuUnit": 10,
+    "unitsPerGbps": 20
+  },
+  "thermal": {
+    "baseAirC": 22,
+    "degPerKwOver": 1.5,
+    "maxAirC": 60,
+    "airTauHours": 2,
+    "serverK": 18,
+    "serverTauTicks": 60,
+    "maxServerC": 110,
+    "cpuOffsetC": 25,
+    "gpuOffsetC": 30,
+    "throttleC": 85,
+    "shutdownC": 95,
+    "throttleMult": 0.5,
+    "alertHysteresisC": 3
+  },
+  "wear": {
+    "healthLossPerHour": 0.02,
+    "refC": 60,
+    "doubleEveryC": 10,
+    "failChancePerHour": 0.0005,
+    "healthDivisor": 50,
+    "failDelayHoursMin": 2,
+    "failDelayHoursMax": 6,
+    "degradedMult": 0.5
+  },
+  "contracts": {
+    "refreshHour": 6,
+    "offersBase": 3,
+    "offersPerRep": 20,
+    "activeBase": 3,
+    "activePerRep": 25,
+    "demandMinPct": 0.1,
+    "demandMaxPct": 0.6,
+    "stretchChance": 0.25,
+    "stretchPct": 1.2,
+    "floors": {
+      "cpu": 20,
+      "gpu": 20,
+      "tb": 8
+    },
+    "penaltyPct": 0.2,
+    "repPerGoodDay": 1,
+    "repMaxPerDay": 3,
+    "repPerBreach": -5,
+    "repCancel": -10,
+    "breachStreakEnd": 3,
+    "riskPoints": 1,
+    "trainingMinGpuTier": 3,
+    "inferenceMinGbps": 100,
+    "types": {
+      "web": {
+        "unit": "cpu",
+        "multMin": 0.8,
+        "multMax": 1,
+        "slaPct": 95,
+        "daysMin": 5,
+        "daysMax": 10,
+        "minRep": 0
+      },
+      "archive": {
+        "unit": "tb",
+        "multMin": 0.8,
+        "multMax": 1,
+        "slaPct": 90,
+        "daysMin": 10,
+        "daysMax": 20,
+        "minRep": 0
+      },
+      "render": {
+        "unit": "gpu",
+        "multMin": 1,
+        "multMax": 1.3,
+        "slaPct": 97,
+        "daysMin": 1,
+        "daysMax": 3,
+        "minRep": 10
+      },
+      "inference": {
+        "unit": "gpu",
+        "multMin": 1.2,
+        "multMax": 1.5,
+        "slaPct": 99.5,
+        "daysMin": 3,
+        "daysMax": 7,
+        "minRep": 60
+      },
+      "training": {
+        "unit": "gpu",
+        "multMin": 1.3,
+        "multMax": 1.6,
+        "slaPct": 99,
+        "daysMin": 2,
+        "daysMax": 5,
+        "minRep": 40
+      }
+    }
+  },
+  "shop": {
+    "standardHours": 2,
+    "expressTicks": 200,
+    "expressMult": 1.25,
+    "sellbackPct": 0.4,
+    "sellbackDegradedMult": 0.5,
+    "sellbackFailedMult": 0.1,
+    "items": {
+      "rack": 3000,
+      "chassis": 1200,
+      "cart": 300
+    },
+    "cartCapacity": 12
+  },
+  "gantry": {
+    "jobTicks": 80,
+    "fee": 25
+  },
+  "money": {
+    "debtFloor": -10000,
+    "interestPctPerDay": 0.02,
+    "operateCapPct": 0.25
+  },
+  "director": {
+    "overheatTicks": 250,
+    "failDelayTicks": 60
+  },
+  "start": {
+    "fresh": {
+      "cash": 25000,
+      "reputation": 20
+    },
+    "showcase": {
+      "cash": 180000,
+      "reputation": 55
+    },
+    "mega": {
+      "cash": 2000000,
+      "reputation": 80
+    }
+  },
+  "milestones": {
+    "inTheBlackPerHour": 2000,
+    "megawattKw": 1000
+  }
+}
